@@ -1,0 +1,28 @@
+.mTop{
+    margin-top: 5%;
+}
+body{
+    background: url('../images/bg.jpg');
+}
+
+h4{
+    color: #ffffff;
+}
+
+.mRight{
+    align-items: center;
+}
+a .lostPass{
+    color: #ffffff;
+    font-size: 10pt;
+    margin: 5px;
+    transition: all .5s;
+}
+
+a .lostPass:hover{
+    color: grey;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}

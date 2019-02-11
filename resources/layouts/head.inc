@@ -1,12 +1,3 @@
-<?php 
-if($admin != true){
-    $admin = null;
-}else{
-    $admin = true;
-}
-    
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 

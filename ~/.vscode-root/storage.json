@@ -1,0 +1,12 @@
+{
+    "telemetry.machineId": "c15b93019fcf30bdc69f42d93df0f207b90f4c38b742f91cf1d5b2c7e95b2eaf",
+    "theme": "vs-dark",
+    "themeBackground": "#1e1e1e",
+    "pickerWorkingDir": "/opt/lampp/htdocs",
+    "openedPathsList": {
+        "workspaces2": [
+            "file:///opt/lampp/htdocs/Practice"
+        ],
+        "files2": []
+    }
+}

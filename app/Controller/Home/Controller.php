@@ -20,20 +20,24 @@ class Controller
 		View::make("home", get_defined_vars());
 	}
 
-	public static function main($user = null){
+	public static function main($user = null,$admin = null){
 		$user = $user ?: "kamsi";
+		$admin = $admin ?: false;
 		View::make("main", get_defined_vars());
 	}
 
-	public static function about(){
+	public static function about($admin = null){
+		$admin = $admin ?: false;
 		View::make("about", get_defined_vars());
 	}
 
-	public static function contact(){
+	public static function contact($admin = null){
+		$admin = $admin ?: false;
 		View::make("contact", get_defined_vars());
 	}
 
-	public static function post(){
+	public static function post($admin = null){
+		$admin = $admin ?: false;
 		View::make("post", get_defined_vars());
 	}
 }

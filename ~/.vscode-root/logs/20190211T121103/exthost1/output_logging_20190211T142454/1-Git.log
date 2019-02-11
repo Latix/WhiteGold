@@ -1,0 +1,22 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /opt/lampp/htdocs/Practice
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse snapshot
+> git rev-parse --symbolic-full-name snapshot@{u}
+> git check-ignore -z --stdin
+fatal: no upstream configured for branch 'snapshot'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/Controller/Admin/Controller.php
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse snapshot
+> git rev-parse --symbolic-full-name snapshot@{u}
+fatal: no upstream configured for branch 'snapshot'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose

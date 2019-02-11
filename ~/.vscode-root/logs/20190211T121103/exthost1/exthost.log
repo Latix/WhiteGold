@@ -20,3 +20,5 @@
 [2019-02-11 12:11:55.367] [exthost] [info] ExtensionService#_doActivateExtension felixfbecker.php-intellisense {"startup":true,"activationEvent":"workspaceContains:**/*.php"}
 [2019-02-11 12:11:55.368] [exthost] [info] ExtensionService#loadCommonJSModule /home/kamsi/.vscode/extensions/felixfbecker.php-intellisense-2.3.10/out/extension
 [2019-02-11 12:11:56.247] [exthost] [info] eager extensions activated
+[2019-02-11 12:12:51.956] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-02-11 12:12:51.957] [exthost] [info] ExtensionService#loadCommonJSModule /snap/vscode/77/usr/share/code/resources/app/extensions/php-language-features/dist/phpMain

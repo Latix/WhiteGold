@@ -22,3 +22,11 @@
 [2019-02-11 12:11:56.247] [exthost] [info] eager extensions activated
 [2019-02-11 12:12:51.956] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
 [2019-02-11 12:12:51.957] [exthost] [info] ExtensionService#loadCommonJSModule /snap/vscode/77/usr/share/code/resources/app/extensions/php-language-features/dist/phpMain
+[2019-02-11 12:44:51.188] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:json"}
+[2019-02-11 12:44:51.189] [exthost] [info] ExtensionService#loadCommonJSModule /snap/vscode/77/usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2019-02-11 12:44:51.341] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:json"}
+[2019-02-11 12:44:51.341] [exthost] [info] ExtensionService#loadCommonJSModule /snap/vscode/77/usr/share/code/resources/app/extensions/extension-editing/dist/extension
+[2019-02-11 12:44:52.073] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:json"}
+[2019-02-11 12:44:52.073] [exthost] [info] ExtensionService#loadCommonJSModule /snap/vscode/77/usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-02-11 12:44:52.603] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":false,"activationEvent":"onLanguage:json"}
+[2019-02-11 12:44:52.603] [exthost] [info] ExtensionService#loadCommonJSModule /snap/vscode/77/usr/share/code/resources/app/extensions/npm/dist/main

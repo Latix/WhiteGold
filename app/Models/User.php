@@ -30,6 +30,7 @@ class User extends DatabaseObject
 	*/
 	public function newUser (\stdClass $userObject) : bool
 	{
+		$this->id 		= $userObject->id;
 		$this->fullName 		= $userObject->fullName;
 		$this->sex 				= $userObject->sex;
 		$this->email 			= $userObject->email;

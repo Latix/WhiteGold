@@ -12,16 +12,19 @@
     <title><?= APP_NAME ?></title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="<?= __file(VENDOR.'bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link href="<?= __file(VENDOR.'bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet"> 
 
     <!-- Theme CSS -->
     <link href="<?= __file(CSS.'clean-blog.min.css'); ?>" rel="stylesheet">
+
 
     <!-- KAMSI CSS -->
     <?php if($admin == true): ?>
     <link href="<?= __file(CSS.'style.css'); ?>" rel="stylesheet">
     <?php endif; ?>
 
+     <link rel="shortcut icon" href="<?= __file(CSS.'favicon.png'); ?>" >
+     
     <!-- Custom Fonts -->
     <link href="<?= __file(VENDOR.'font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>

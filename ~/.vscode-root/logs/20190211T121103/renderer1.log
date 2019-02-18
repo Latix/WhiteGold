@@ -1,0 +1,4 @@
+[2019-02-11 12:11:13.739] [renderer1] [info] no standard startup: not the explorer viewlet
+[2019-02-11 12:11:52.465] [renderer1] [info] no standard startup: not just one text editor
+[2019-02-11 14:25:08.952] [renderer1] [info] no standard startup: not a new window
+[2019-02-11 14:25:25.623] [renderer1] [warning] UNRESPONSIVE extension host, 'felixfbecker.php-intellisense' took 70% of 12472.253ms, saved PROFILE here: '/tmp/exthost-e12e1f.cpuprofile' [{"id":"felixfbecker.php-intellisense","total":8675042,"percentage":70},{"id":"gc","total":72911,"percentage":1},{"id":"platformio.platformio-ide","total":3460984,"percentage":28},{"id":"program","total":12316,"percentage":0},{"id":"self","total":240876,"percentage":2},{"id":"vscode.git","total":332,"percentage":0},{"id":"vscode.php-language-features","total":1970,"percentage":0}]

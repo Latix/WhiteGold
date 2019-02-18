@@ -15,3 +15,7 @@ Route::register('/admin' , function(){
 Route::register('/admin/reset-password' , function(){
     Controller::resetPassword();
 }, "Reset Password Page");
+
+Route::register('/admin/dashboard' , function(){
+    Controller::dashboard();
+}, "Admin Dashboard");

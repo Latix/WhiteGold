@@ -13,18 +13,18 @@ use App\Models\User;
 print APP;
 
 $user = new User();
-$query = $user->newUser((object) [
-    'id' => '12',
-    'fullName' => "Kamsi kodi",
-    'sex' => "M",
-    'email' => 'kamsi@gmail.com',
-    'password' => '1234'
-]);
+// $query = $user->newUser((object) [
+//     'id' => '12',
+//     'fullName' => "Kamsi kodi",
+//     'sex' => "M",
+//     'email' => 'kamsi@gmail.com',
+//     'password' => '1234'
+// ]);
 
-if($query){
-    echo "<br>success";
-} else{
-    echo "failed";
-}
-
+// if($query){
+//     echo "<br>success";
+// } else{
+//     echo "failed";
+// }
+$user->updateLastLogin (1);
 //Encrypt::passwordEncrypt($userObject->password)

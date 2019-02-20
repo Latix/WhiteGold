@@ -3,28 +3,66 @@
 use Blaze\File\File;
 use App\Models\User;
 
-// print "<pre>";
-// print '<p><a href="'.__url("./", TRUE).'">Home</a></p>';
-// print "<p>Welcome Guest \u{1F60D}</p>";
-// print "<p>Write your test code here:</p>";
+$message = "";
+$action = $action ?? "";
+$id = (int) ($id ?? 0);
 
-// print "<p>Memory Usage: ".File::sizeBytesToText(memory_get_usage(true))."</p>";
+if ($action == "new"):
+    if (isset($_POST['submit'])):
+        // Validation
+        $email = $_POST['email'] ?? "";
+        $fullName = $_POST['name'] ?? "";
+        $sex = $_POST['sex'] ?? "";
+        $password = $_POST['password'] ?? "";
 
-print APP;
+        if (empty($email) || empty($fullName) || empty($sex) || empty($password))
+            $message = "All fields are required";
+        
+        $user = new User();
+        if ($user->checkUser('email', $email))
+            $message = "User already exist!";
 
-$user = new User();
-// $query = $user->newUser((object) [
-//     'id' => '12',
-//     'fullName' => "Kamsi kodi",
-//     'sex' => "M",
-//     'email' => 'kamsi@gmail.com',
-//     'password' => '1234'
-// ]);
+        if (empty($message)):
+            $result = $user->newUser((object) [
+                'fullName' => $fullName,
+                'sex' => $sex,
+                'email' => $email,
+                'password' => $password
+            ]);
+            $message = $result ? "You have registered!" : "Failed";
+        endif;
+        // $user->updateLastLogin (1);
+        //Encrypt::passwordEncrypt($userObject->password)
+    endif;
+?>
+    <form action="<?= __url('./user/new/'.$id) ?>" method="post">
+        <input type="email" name="email" placeholder="Email:" />
+        <input type="text" name="name" placeholder="Name:" />
+        <select name="sex">
+            <option>Select your sex:</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+        <input type="password" name="password" placeholder="Password:" />
+        <input type="submit" name='submit' value="Register" />
+    </form>
+<?php endif; ?>
 
-// if($query){
-//     echo "<br>success";
-// } else{
-//     echo "failed";
-// }
-$user->updateLastLogin (1);
-//Encrypt::passwordEncrypt($userObject->password)
+<?php
+
+if ($action == "read"):
+    // $users = User::findAll();
+    $users = User::findWhere("id", $id);
+    foreach ($users as $user):
+        echo "<p>{$user->id} : {$user->fullName} : {$user->email}</p>";
+    endforeach;
+endif;
+
+if ($action == "delete"):
+    $result = (new User)->deleteRow($id);
+    $message = $result ? "User have been deleted!" : "Deletion Failed";
+endif;
+?>
+
+<?php $users = User::countWhere("fullName", "kamsi"); ?>
+<p>Message: <?= $message.' No: '. $users; ?></p>

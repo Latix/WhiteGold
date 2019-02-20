@@ -11,6 +11,11 @@ Route::register('/infophp', function ()
     phpinfo();
 }, "PHP Information");
 
+Route::register('/user/{action}/{id}', function ($action, $id)
+{
+	View::make('test', get_defined_vars());
+}, "Test");
+
 Route::register('/test', function ()
 {
 	View::make('test');

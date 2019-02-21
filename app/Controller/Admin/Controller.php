@@ -31,4 +31,10 @@ class Controller
 		$admin = true;
 	    View::make("admin.dashboard", get_defined_vars());
 	}
+
+	public static function storePost ()
+	{
+		$admin = true;
+	    View::make("admin.dashboard", get_defined_vars());
+	}
 }

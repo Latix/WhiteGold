@@ -10,6 +10,7 @@ $id = (int) ($id ?? 0);
 if ($action == "new"):
     if (isset($_POST['submit'])):
         // Validation
+       
         $email = $_POST['email'] ?? "";
         $fullName = $_POST['name'] ?? "";
         $sex = $_POST['sex'] ?? "";
@@ -19,9 +20,10 @@ if ($action == "new"):
             $message = "All fields are required";
         
         $user = new User();
-        if ($user->checkUser('email', $email))
+        if ($user->checkUser('email', $email)):
             $message = "User already exist!";
-
+            //redirectTo('./main');
+        endif;
         if (empty($message)):
             $result = $user->newUser((object) [
                 'fullName' => $fullName,
@@ -55,7 +57,10 @@ if ($action == "read"):
     $users = User::findWhere("id", $id);
     foreach ($users as $user):
         echo "<p>{$user->id} : {$user->fullName} : {$user->email}</p>";
+        echo timeAgo($user->created);
+        
     endforeach;
+    
 endif;
 
 if ($action == "delete"):
@@ -65,4 +70,4 @@ endif;
 ?>
 
 <?php $users = User::countWhere("fullName", "kamsi"); ?>
-<p>Message: <?= $message.' No: '. $users; ?></p>
+<p>Message: <?= $message.' Session: '; ?></p>

@@ -19,3 +19,7 @@ Route::register('/admin/reset-password' , function(){
 Route::register('/admin/dashboard' , function(){
     Controller::dashboard();
 }, "Admin Dashboard");
+
+Route::register('/admin/dashboard/add-post' , function(){
+    Controller::storePost();
+}, "Store Post");

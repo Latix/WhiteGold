@@ -21,8 +21,16 @@ class Controller
 	}
 
 	public static function main($user = null,$admin = null){
+		$show = false;
 		$user = $user ?: "kamsi";
 		$admin = $admin ?: false;
+		View::make("main", get_defined_vars());
+	}
+
+	public static function show($id = null, $admin = null){
+		$admin = $admin ?: false;
+		$show = true;
+		$id = $id ?: null;
 		View::make("main", get_defined_vars());
 	}
 

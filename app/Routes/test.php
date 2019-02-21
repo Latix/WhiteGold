@@ -12,6 +12,10 @@ Route::register('/main' , function(){
     Controller::main();
 }, "My Main");
 
+Route::register('/main/{id}' , function($id){
+    Controller::show($id);
+}, "Show Post");
+
 Route::register('/main/{user}' , function($user){
     Controller::main($user);
 }, "My Main");

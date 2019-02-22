@@ -20,32 +20,27 @@ class Controller
 		View::make("home", get_defined_vars());
 	}
 
-	public static function main($user = null,$admin = null){
+	public static function main($user = null){
 		$show = false;
 		$user = $user ?: "kamsi";
-		$admin = $admin ?: false;
 		View::make("main", get_defined_vars());
 	}
 
-	public static function show($id = null, $admin = null){
-		$admin = $admin ?: false;
+	public static function show($id = null){
 		$show = true;
 		$id = $id ?: null;
 		View::make("main", get_defined_vars());
 	}
 
-	public static function about($admin = null){
-		$admin = $admin ?: false;
+	public static function about(){
 		View::make("about", get_defined_vars());
 	}
 
-	public static function contact($admin = null){
-		$admin = $admin ?: false;
+	public static function contact(){
 		View::make("contact", get_defined_vars());
 	}
 
-	public static function post($admin = null){
-		$admin = $admin ?: false;
+	public static function post(){
 		View::make("post", get_defined_vars());
 	}
 }

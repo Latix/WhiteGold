@@ -14,27 +14,38 @@ class Controller
 	* @return void
 	*/
 	
-	public static function index ($admin = null)
+	public static function index ()
 	{
-		$admin =$admin ?: true;
 	    View::make("admin.index", get_defined_vars());
 	}
 
-	public static function resetPassword ($admin = null)
+	public static function resetPassword ()
 	{
-		$admin =$admin ?: true;
 	    View::make("admin.reset-password", get_defined_vars());
 	}
 	
 	public static function dashboard ()
 	{
-		$admin = true;
 	    View::make("admin.dashboard", get_defined_vars());
 	}
 
 	public static function storePost ()
 	{
-		$admin = true;
-	    View::make("admin.dashboard", get_defined_vars());
+	    View::make("admin.post.new-post", get_defined_vars());
+	}
+
+	public static function posts ()
+	{
+	    View::make("admin.post.posts", get_defined_vars());
+	}
+
+	public static function post ($id)
+	{
+	    View::make("admin.post.post", get_defined_vars());
+	}
+
+	public static function editPost ($id)
+	{
+	    View::make("admin.post.edit-post", get_defined_vars());
 	}
 }

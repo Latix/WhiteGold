@@ -26,3 +26,7 @@ a .lostPass:hover{
 a:hover{
     text-decoration: none;
 }
+
+.post-subtitle1{
+    color: #ffffff;
+}

@@ -20,6 +20,18 @@ Route::register('/admin/dashboard' , function(){
     Controller::dashboard();
 }, "Admin Dashboard");
 
-Route::register('/admin/dashboard/add-post' , function(){
+Route::register('/admin/add-post' , function(){
     Controller::storePost();
 }, "Store Post");
+
+Route::register('/admin/posts' , function(){
+    Controller::posts();
+}, "All Post");
+
+Route::register('/admin/post/{id}' , function($id){
+    Controller::post($id);
+}, "Show Post");
+
+Route::register('/admin/edit-post/{id}' , function($id){
+    Controller::editPost($id);
+}, "Edit Post");

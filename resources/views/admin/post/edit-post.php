@@ -13,7 +13,7 @@ if(isset($_POST['submit'])):
 
     $posts = new Post();
     $query = $posts->updatePost((object) [
-        'id' => $_POST['post_id'],
+        'id' => $id,
         'title' => $title,
         'post' =>   $post 
     ]);
@@ -31,7 +31,6 @@ endif;
 <form action="<?= __url('./admin/edit-post/'.$post->id); ?>" method="POST">
     <input type="text" class="form-control" name="title" placeholder="Title" value="<?= $post->title; ?>"/><br>
     <input type="text" class="form-control" name="post" placeholder="Post" value="<?= $post->post; ?>"/><br>
-    <input type="hidden" value="<?= $post->id; ?>" name="post_id" />
     <br>
     <input type="submit" name="submit" class="btn btn-success" value="Update" />
 </form>

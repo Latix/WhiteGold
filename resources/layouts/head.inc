@@ -15,11 +15,16 @@
     <link href="<?= __file(VENDOR.'bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet"> 
 
     <!-- Theme CSS -->
-    <link href="<?= __file(CSS.'clean-blog.min.css'); ?>" rel="stylesheet">
+    <?php if (strpos(App\Start\Route::$route, 'admin') !== FALSE): ?>
+    <link href="<?= __file(CSS.'clean-blog.css'); ?>" rel="stylesheet">
+    <?php endif; ?>
 
+    <?php if (strpos(App\Start\Route::$route, 'admin') === FALSE): ?>
+    <link href="<?= __file(CSS.'clean-blog.min.css'); ?>" rel="stylesheet">
+    <?php endif; ?>
 
     <!-- KAMSI CSS -->
-    <?php if($admin == true): ?>
+    <?php if (strpos(App\Start\Route::$route, 'admin') !== FALSE): ?>
     <link href="<?= __file(CSS.'style.css'); ?>" rel="stylesheet">
     <?php endif; ?>
 

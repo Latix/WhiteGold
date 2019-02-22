@@ -1,9 +1,9 @@
-
-<?php layout('head', get_defined_vars()); ?>
-
-<?php layout('navbar', get_defined_vars()) ?>
 <?php
+
 use App\Models\Post;
+
+layout('head', get_defined_vars());
+layout('navbar', get_defined_vars());
 
 $display = 'none';
 $msg = '';
@@ -20,11 +20,10 @@ if(isset($_POST['submit'])):
     $display = 'block';
     $msg = ($query) ? 'Success' : 'Failed';
 endif;
-
 ?>
 <div class="container">
 <div class="row mTop">
-<form action="<?= __url('./admin/dashboard/add-post'); ?>" method="POST">
+<form action="<?= __url('./admin/add-post'); ?>" method="POST">
     <input type="text" class="form-control" name="title" placeholder="Title"/><br>
     <input type="text" class="form-control" name="post" placeholder="Post"/><br>
     <br>

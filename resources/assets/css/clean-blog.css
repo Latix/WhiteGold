@@ -6,7 +6,7 @@
  body {
     font-family: 'Lora', 'Times New Roman', serif;
     font-size: 20px;
-    color: #333333;
+    color: #ffffff;
   }
   p {
     line-height: 1.5;
@@ -223,7 +223,7 @@
     }
   }
   .post-preview > a {
-    color: #333333;
+    color: #ffffff;
   }
   .post-preview > a:hover,
   .post-preview > a:focus {
@@ -241,7 +241,7 @@
     margin-bottom: 10px;
   }
   .post-preview > .post-meta {
-    color: #777777;
+    color: #ffffff;
     font-size: 18px;
     font-style: italic;
     margin-top: 0;

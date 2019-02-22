@@ -43,7 +43,7 @@ if(isset($_POST['submit'])):
 </div>
 
 </div>
-<div style="padding: 5px;text-align: center;position: fixed;" class="col-sm-1 alert alert-success">
+<div style="padding: 5px;text-align: center;position: fixed;display: none;" class="col-sm-1 alert alert-success">
     <strong>Success!</strong>
 </div>
 <hr>

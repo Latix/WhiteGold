@@ -35,3 +35,8 @@ Route::register('/admin/post/{id}' , function($id){
 Route::register('/admin/edit-post/{id}' , function($id){
     Controller::editPost($id);
 }, "Edit Post");
+
+Route::register('/admin/logout' , function()
+{
+    Controller::logout();
+}, "Logout");

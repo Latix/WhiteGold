@@ -20,14 +20,16 @@ Route::register('/main/{user}' , function($user){
     Controller::main($user);
 }, "My Main");
 
-Route::register('/about' , function(){
+Route::register('/about' , function()
+{
     Controller::about();
 }, "About");
 
-Route::register('/contact' , function(){
+Route::register('/contact' , function ()
+{
     Controller::contact();
 }, "Contact");
 
-Route::register('/post' , function(){
+Route::register('/posts' , function(){
     Controller::post();
 }, "Post");

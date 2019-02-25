@@ -82,10 +82,10 @@ class User extends DatabaseObject
 	/**
 	* User login authentication.
 	* @param string $password
-	* @param \User $foundObject
+	* @param User $foundObject
 	* @return bool
 	*/
-	public static function validateUser (string $password, \User $foundObject) : bool
+	public static function validateUser (string $password, User $foundObject) : bool
 	{
 		// Check password
 		return (!Encrypt::passwordCheck($password, $foundObject->password)) ? FALSE : TRUE;
